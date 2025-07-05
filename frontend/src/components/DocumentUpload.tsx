@@ -265,7 +265,7 @@ export const DocumentUpload = ({ onUploadComplete }: DocumentUploadProps) => {
       }
 
       toast({
-        title: "Upload Failed",
+        title: "✨ Upload Failed",
         description: errorMessage,
         variant: "destructive",
         className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
