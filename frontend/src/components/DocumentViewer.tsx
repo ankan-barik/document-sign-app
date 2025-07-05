@@ -337,6 +337,7 @@ export const DocumentViewer = ({
         title: "✨ No Signers Found",
         description: "Please add signers before sending the document.",
         variant: "destructive",
+        className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
       })
       return
     }

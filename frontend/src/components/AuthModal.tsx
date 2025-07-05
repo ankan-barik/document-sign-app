@@ -191,9 +191,10 @@ export const AuthModal = ({ isOpen, onClose, mode, onSuccess }: AuthModalProps) 
       }
       
       toast({
-        title: "Connection Error",
+        title: "✨ Connection Error",
         description: errorMessage,
         variant: "destructive",
+        className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
       });
     } finally {
       setLoading(false);
@@ -205,9 +206,10 @@ export const AuthModal = ({ isOpen, onClose, mode, onSuccess }: AuthModalProps) 
     
     if (!formData.email) {
       toast({
-        title: "Error",
+        title: "✨ Error",
         description: "Please enter your email address",
         variant: "destructive",
+         className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
       });
       return;
     }
@@ -219,6 +221,7 @@ export const AuthModal = ({ isOpen, onClose, mode, onSuccess }: AuthModalProps) 
         title: "Invalid Email",
         description: "Please enter a valid email address",
         variant: "destructive",
+         className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
       });
       return;
     }
@@ -260,6 +263,7 @@ export const AuthModal = ({ isOpen, onClose, mode, onSuccess }: AuthModalProps) 
           title: "Error",
           description: data.message || "Failed to send reset email. Please try again.",
           variant: "destructive",
+           className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
         });
       }
     } catch (error) {
@@ -274,6 +278,7 @@ export const AuthModal = ({ isOpen, onClose, mode, onSuccess }: AuthModalProps) 
         title: "Error",
         description: errorMessage,
         variant: "destructive",
+         className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
       });
     } finally {
       setLoading(false);

@@ -268,6 +268,7 @@ export const DocumentUpload = ({ onUploadComplete }: DocumentUploadProps) => {
         title: "Upload Failed",
         description: errorMessage,
         variant: "destructive",
+        className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
       })
     } finally {
       setUploading(false)

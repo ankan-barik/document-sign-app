@@ -118,6 +118,7 @@ export const Dashboard = ({ onLogout }: DashboardProps) => {
         title: "Error Loading Documents",
         description: errorMessage,
         variant: "destructive",
+        className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
       })
     } finally {
       setLoading(false)
@@ -223,6 +224,7 @@ export const Dashboard = ({ onLogout }: DashboardProps) => {
         title: "Failed to Delete",
         description: "There was an error deleting the document. Please try again.",
         variant: "destructive",
+        className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
       })
     }
   }
@@ -265,6 +267,7 @@ export const Dashboard = ({ onLogout }: DashboardProps) => {
         title: "✨ Failed to send reminders",
         description: "There was an error sending reminders. Please try again.",
         variant: "destructive",
+        className: "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-0",
       })
     }
   }
