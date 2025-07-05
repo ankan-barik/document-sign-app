@@ -15,7 +15,7 @@ interface AuthModalProps {
   onSuccess: () => void;
 }
 
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export const AuthModal = ({ isOpen, onClose, mode, onSuccess }: AuthModalProps) => {
   const [currentTab, setCurrentTab] = useState(mode);
@@ -154,6 +154,8 @@ export const AuthModal = ({ isOpen, onClose, mode, onSuccess }: AuthModalProps) 
       if (data.success) {
         // Store authentication data (using in-memory storage for Claude.ai compatibility)
         const userData = { token: data.token, user: data.user };
+        localStorage.setItem('userData', JSON.stringify(userData));
+        localStorage.setItem('token', data.token);
         
         toast({
           title: "✨ Success!",
