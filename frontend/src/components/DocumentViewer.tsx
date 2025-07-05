@@ -31,10 +31,8 @@ interface DocumentViewerProps {
   onDownload: () => void
 }
 
-const API_BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? process.env.NEXT_PUBLIC_API_URL || "https://your-production-api.com"
-    : "http://localhost:5000"
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 
 export const DocumentViewer = ({
   document,

@@ -10,10 +10,7 @@ import { Input } from "@/components/ui/input"
 import { useToast } from "@/hooks/use-toast"
 import { PenTool, FileText, CheckCircle, X, Loader2 } from "lucide-react"
 
-const API_BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_API_URL || "https://your-production-api.com"
-    : "http://localhost:5000"
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export default function SignPage() {
   const { id } = useParams()
